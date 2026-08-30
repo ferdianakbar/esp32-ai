@@ -1,6 +1,4 @@
-# SETUP - WiFi Hotspot Fixer (APK Android)
-# Build: GitHub Actions (tanpa install apapun di PC lo)
-
+# SETUP — WiFi Hotspot Fixer (APK Android) — build dari subfolder wifihotspotfixer/
 name: Build APK
 
 on:
@@ -11,6 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: wifihotspotfixer
     steps:
       - uses: actions/checkout@v4
 
@@ -32,4 +33,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: WiFiHotspotFixer-debug
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: wifihotspotfixer/app/build/outputs/apk/debug/app-debug.apk

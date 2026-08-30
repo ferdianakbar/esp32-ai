@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📶 WiFi Hotspot Fixer"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Biar iPhone gampang connect hotspot 5GHz: paksa region Indonesia + lock channel 48 (non-DFS).\n\nWajib: aktifkan Wireless Debugging + pairing (sekali saja)."
+        android:textSize="14sp"
+        android:paddingBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnFix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔧 FIX (force country ID)"/>
+
+    <Button
+        android:id="@+id/btnChannel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📡 LOCK channel 5GHz ke-48"/>
+
+    <Button
+        android:id="@+id/btnStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📊 Cek status WiFi"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp">
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:typeface="monospace"
+            android:text="Hasil command muncul di sini…"/>
+    </ScrollView>
+</LinearLayout>
